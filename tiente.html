@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="3">Amount</td>
+        <td colspan="2">From Currancy</td>
+        <td colspan="2">To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <input type="number" id="so">
+        </td>
+        <td colspan="2">
+            <select name="" id="selec1">
+                <option value="a">Vietnam</option>
+                <option value="b">Germany</option>
+                <option value="c">America</option>
+                <option value="d">Japan</option>
+            </select>
+        </td>
+        <td colspan="2">
+            <select name="" id="select2">
+                <option value="a">VND</option>
+                <option value="b">EUR</option>
+                <option value="c">USD</option>
+                <option value="d">JPY</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="chuyendoi()">Convert</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function chuyendoi() {
+        let sotien = document.getElementById("so").value;
+        let select1 = document.getElementById("selec1").value;
+        let select2 = document.getElementById("select2").value;
+        if (select1 == select2 ) {
+            alert(sotien);
+        }
+        if (select1 == "a" && select2 == "b") {
+            alert (sotien/26343);
+        }
+        if (select1 == "b" && select2 == "a"){
+            alert(sotien*26343);
+        }
+        if (select1 == "a" && select2 == "c"){
+            alert(sotien/22756);
+        }
+        if (select1 == "c" && select2 == "a"){
+            alert(sotien*22756);
+        }
+        if (select1 == "a" && select2 == "d"){
+            alert(sotien/201,74);
+        }
+        if (select1 == "d" && select2 == "a"){
+            alert(sotien*201,74);
+        }
+        if (select1 == "b" && select2 == "c"){
+            alert(sotien/1,16);
+        }
+        if (select1 == "c" && select2 == "b"){
+            alert(sotien*1,16);
+        }
+        if (select1 == "b" && select2 == "d"){
+            alert(sotien*130,60);
+        }
+        if (select1 == "d" && select2 == "b"){
+            alert(sotien/130,60);
+        }
+        if (select1 == "c" && select2 == "d"){
+            alert(sotien*112,80);
+        }
+        if (select1 == "d" && select2 == "c"){
+            alert(sotien/112,80);
+        }
+    }
+</script>
+</body>
+</html>
